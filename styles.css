@@ -15,7 +15,6 @@ p {
 body {
     display: flex;
     flex-direction: column;
-    max-height: 100vh;
     height: 100vh;
 }
 
@@ -79,7 +78,38 @@ flex: 3;
 .footerD {
 background-color: aquamarine;
 position: absolute;
-height: 180px;
+height: 20vh;
 width: 100%;
-top: -180px;
+top: -20vh;
 }
+
+.animationOne {
+    animation: animationOne 1s ease-in-out infinite alternate;
+}
+.animationTwo {
+    animation: animationTwo 1s ease-in-out infinite alternate;
+}
+
+@keyframes animationOne {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        top: -20vh;
+    }
+    100% {
+        transform: scale(2);
+        top: -40vh;
+    }
+}
+
+@keyframes animationTwo {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(3) rotate(360deg) rotate3d(1,1,1, 360deg);
+        background-color: blue;
+    }
+}
+
